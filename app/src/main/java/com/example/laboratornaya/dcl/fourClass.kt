@@ -13,7 +13,7 @@ open class fourClass(
         val one = fourClass(0, "Сколько животных взял Моисей в свой ковчег?", "нисколько. Ковчег был у Ноя", "Моисей?")
         val two = fourClass(1, "Воробей может съесть горсточку зерна, а лошадь не может. Почему?", "Воробей слишком маленький, чтобы съесть лошадь", "Размер")
 
-        val ordersAll = listOf(
+        val ordersAll = mutableListOf(
             one, two
         )
 

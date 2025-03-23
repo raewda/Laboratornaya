@@ -41,11 +41,8 @@ fun Four(
     four : MutableState<Boolean>
 ){
     val item = remember { mutableStateOf(fourClass.one) }
-
     val answer = remember { mutableStateOf("") }
-
     val openDialog = remember { mutableStateOf(false) }
-
     var count = 0
 
     Scaffold(
@@ -70,7 +67,6 @@ fun Four(
                 lineHeight = 50.sp,
                 textAlign = TextAlign.Center
             )
-
 
             Button(
                 onClick = {
@@ -169,7 +165,8 @@ fun Four(
                 modifier = Modifier
                     .fillMaxWidth(0.7F)
                     .padding(vertical = 50.dp),
-                textAlign = TextAlign.Center
+                textAlign = TextAlign.Center,
+                lineHeight = 50.sp
             )
 
             TextButton(
@@ -196,13 +193,14 @@ fun Four(
                     }
                 ){
                     Card(
-                        modifier = Modifier
-                            .size(width = 300.dp, height = 450.dp),
+                        modifier = Modifier,
                         colors = CardDefaults.cardColors(one)
                     ) {
                         Column(
                             modifier = Modifier
-                                .verticalScroll(rememberScrollState())
+                                .fillMaxWidth()
+                                .verticalScroll(rememberScrollState()),
+                            horizontalAlignment = Alignment.CenterHorizontally
                         ) {
                             Text(
                                 text = item.value.hint,
@@ -221,3 +219,4 @@ fun Four(
         }
     }
 }
+
