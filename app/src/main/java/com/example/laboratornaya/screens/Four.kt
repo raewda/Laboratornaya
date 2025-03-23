@@ -158,8 +158,7 @@ fun Four(
                     }
                 else{
                     ""
-                }
-                ,
+                },
                 color = one,
                 fontSize = 40.sp,
                 modifier = Modifier
