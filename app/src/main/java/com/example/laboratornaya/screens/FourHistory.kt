@@ -2,6 +2,7 @@ package com.example.laboratornaya.screens
 
 import android.os.Build
 import androidx.annotation.RequiresApi
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxHeight
@@ -68,7 +69,10 @@ fun FourHistory(
                 fontSize = 54.sp,
                 modifier = Modifier
                     .fillMaxWidth(0.7F)
-                    .padding(vertical = 20.dp),
+                    .padding(vertical = 20.dp)
+                    .clickable {
+                        navController.navigateUp()
+                    },
                 lineHeight = 50.sp,
                 textAlign = TextAlign.Center
             )

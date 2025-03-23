@@ -1,5 +1,6 @@
 package com.example.laboratornaya.screens
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -63,7 +64,10 @@ fun Four(
                 fontSize = 54.sp,
                 modifier = Modifier
                     .fillMaxWidth(0.7F)
-                    .padding(vertical = 50.dp),
+                    .padding(vertical = 50.dp)
+                    .clickable {
+                        navController.navigateUp()
+                    },
                 lineHeight = 50.sp,
                 textAlign = TextAlign.Center
             )
